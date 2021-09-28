@@ -1,0 +1,128 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin: 0;
+    
+}
+.videoContainer{
+
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(43, 42, 42);
+}
+video{
+    height: 100%;
+    width: 100%;
+    
+}
+button{
+    position: fixed;
+    z-index: 3;
+    right: 6%;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 47%;
+    border: 5px solid rgba(255, 255, 255, 0.767);
+    background-color: rgba(0, 0, 0, 0.459);
+}
+#capture{
+   
+    top: calc(50vh - 4rem);
+}
+#record{
+    top: calc(50vh + 4rem);
+    
+    
+}
+button span {
+    height: 60%;
+    width: 68%;
+    display: inline-block;
+    border-radius: 47%;
+  }
+  #capture span{
+      background-color: rgba(255, 255, 255, 0.726);
+  }
+  #record span{
+      position:relative;
+      top:2px;
+      height: 45%;
+      width: 50%;
+      background-color: rgba(255, 0, 0, 0.774);
+  }
+.capture-animation{
+    animation: capture;
+    animation-duration: 1s;
+}
+.record-animation{
+    animation: record;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+
+}
+  @keyframes capture{
+      0%{ transform: scale(1);}
+      50%{transform: scale(0.7);}
+      100%{transform: scale(1);}
+  }
+  @keyframes record{
+      0%{transform: scale(1);}
+      50%{transform: scale(1.4);}
+      100%{transform: scale(1);}
+  }
+
+.filters{
+    z-index: 3;
+    height: 15rem;
+    width: 5rem;
+    border: 1px solid rgba(255, 255, 255, 0.61);
+    position: fixed;
+    top: 20vh;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.filter{
+    border: 1px solid rgba(255, 255, 255, 0.568);
+    flex-grow: 1;
+    background-image: url(https://images-na.ssl-images-amazon.com/images/I/91wcUPNHFEL.png);
+    background-size: cover;
+    background-blend-mode: color-burn;
+    
+}
+.filter-div{
+    position: fixed;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+.zoom{
+    z-index: 3;
+    width: 3rem;
+    height: 5rem;
+    border: 1px solid;
+    position: fixed;
+    top: 10vh;
+    right:6.5%;
+    display: flex;
+    flex-direction: column;
+}
+.zoom div{
+    background-color: rgba(0, 0, 0, 0.884);
+    color: white;
+    height: 2.5rem;
+    width: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.856);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#gallery{
+    bottom: 4rem;
+    color: white;
+    font-size: 0.8rem;
+}

@@ -1,0 +1,39 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin: 0;
+    
+}
+.media-container{
+height: 100vh;
+width: 100vw;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+.media-card{
+    border: 1px solid;
+    height: 20rem;
+    width: 20rem;
+    margin-top: 2rem;
+}
+.actual-media{
+    height: 80%;
+    width: 100%;
+}
+.media-buttons{
+    height: 20%;
+    width: 100%;
+}
+.media-buttons button{
+    height: 50%;
+    width: 100%;
+}
+.media-delete{
+    background-color: rgba(255, 0, 0, 0.747);
+}
+.actual-media video,img{
+height: 100%;
+width: 100%;
+}
